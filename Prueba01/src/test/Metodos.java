@@ -24,7 +24,14 @@ public class Metodos {
         
         //correr(numero);
         //correr(otroNumero);
-        correrRecursivamente(6);
+        //correrRecursivamente(6);
+        int num = 6;
+        /*
+        int fact = factorial(num);
+        System.out.println("Factorial de " + num + " es: " +  fact);
+        */
+        int factR = factoriaRecursivo(num);
+        System.out.println("Factorial de " + num + " es: " +  factR);
     }
     
     
@@ -88,6 +95,52 @@ public class Metodos {
         }
         System.out.println("Corrí " + distanciaEnMetros + " metros");
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    //Facotrial de un número
+    /*
+    
+    3! => 1*2*3             = 6 
+    4! => 1*2*3*4           = 24 
+    5! => 1*2*3*4*5         = 120       5! = 4!*5   =>  5! = (5-1)!*5
+    
+    n! = (n-1)!*n
+    (n-1)! = ((n-1)-1)!* (n-1)
+    */
+    public static int factorial(int numero){
+        int numFactorial = 1;
+        for(int i=1; i<=numero; i++){
+            numFactorial *= i;
+        }
+        return numFactorial;
+    }
+    
+    private static int factoriaRecursivo(int numero){
+        if(numero == 0){
+            return 1;
+        }
+        return numero * factoriaRecursivo(numero-1);
+    }
+    
+    
+    //1-1-2-3-5-8-13-21
+    
+    
+    
+    
+    
     
     
     
